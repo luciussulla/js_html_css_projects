@@ -1,0 +1,231 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+.container {
+  width: 100%; 
+  height: 100vh; 
+  background-image: radial-gradient(
+      closest-side at 5% 10%, 
+      rgb(0,0,0), 
+      rgb(11,54,88) 1000%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+  /* for container */ 
+  perspective: 150rem; 
+  overflow: hidden; /* scrollbars !!! */
+}
+
+.swing {
+  position: absolute; 
+
+  width: 40rem; 
+  height: 20rem; 
+  background-color: rgba(206, 216, 91, .7);
+  transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg);;  
+  transform-style: preserve-3d;
+  
+  top: 50%;
+}
+
+.swing-1 {
+  animation: swingAnim 20s infinite ease-in-out; 
+  
+  transform-origin: top; 
+}
+
+.swing-2 {
+  animation: swingAnim 20s -4s infinite ease-in-out; 
+}
+
+.swing-3 {
+  animation: swingAnim 20s -10s infinite ease-in-out; 
+}
+
+.swing-4 {
+  animation: swingAnim 20s -15s infinite ease-in-out; 
+}
+
+.swing-5 {
+  animation: swing5Anim 4s -4s infinite ease-in-out; 
+}
+
+@keyframes swingAnim {
+  0% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(100rem);
+  }
+  20% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(21rem);
+  }
+  25% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(27rem);
+  }
+  35% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(0rem);
+  }
+  50% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(-60rem);
+  }
+  55% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(-55rem);
+  }
+  65%, 70% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(-84rem);
+  }
+  100% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(-800rem);
+  }
+}
+
+@keyframes swing5Anim {
+  0% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(0);
+  }
+  50% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(30rem);
+  }
+  100% {
+    transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg) translateY(0);
+
+  }
+}
+
+.swing::before {
+  content: ""; 
+  width: 1rem; 
+  height: 100%; 
+  background-color: #b4bb65;
+  position: absolute; 
+  transform-origin: left; 
+  transform: rotateY(90deg); 
+}
+
+.swing::after {
+  content: ""; 
+  height: 1rem; 
+  width: 100%; 
+  background-color: #e2ec6c;
+  position: absolute; 
+  bottom: 0; 
+  transform-origin: bottom; 
+  transform: rotateX(90deg); 
+}
+
+.circle {
+  width: 3rem; 
+  height: 3rem; 
+  background-color: #c5c757;
+  border-radius: 50%;
+
+  position: absolute;  
+
+  display: grid; 
+  place-items: center; 
+
+  /* circle has a 3d line inside it so */ 
+  transform-style: preserve-3d; 
+}
+
+.circle-1 {
+  top: 1rem; 
+  left: 1rem; 
+}
+
+.circle-2 {
+  top: 1rem; 
+  right: 1rem; 
+}
+
+.circle-3 {
+  bottom: 1rem; 
+  right: 1rem; 
+}
+
+.circle-4 {
+  bottom: 1rem; 
+  left: 1rem; 
+}
+
+/* lines for swing */ 
+
+.circle::before {
+  content: ""; 
+  width: 1.8rem; 
+  height: 1.8rem; 
+  background-color: #e9d8d8;
+  border-radius: 50%; 
+
+  position: absolute; 
+
+  transform: translateZ(.3rem); 
+}
+
+.rope {
+  height: 40rem; 
+  width: .3rem; 
+  background-color: #fff;
+
+  position: absolute; 
+  transform-origin: top;
+  transform: translateZ(20rem) rotateX(90deg) rotateY(90deg); 
+}
+
+.rope-1 {
+  top: 10rem; 
+  left: 2.5rem; 
+}
+
+.rope-2 {
+  top: 10rem; 
+  right: 2.5rem; 
+}
+
+.rope::before {
+  content: ""; 
+  width: .3rem; 
+  height: 23rem; 
+
+  background-color: red;
+  position: absolute; 
+
+  transform-origin: bottom; 
+  transform: translateY(-23rem) rotateZ(23deg); 
+}
+
+.rope::after {
+  content: ""; 
+  width: .3rem; 
+  height: 23rem; 
+
+  background-color: red;
+  position: absolute; 
+
+  transform-origin: bottom; 
+  transform: translateY(-23rem) rotateZ(-23deg); 
+}
+
+
+.ball {
+  width: 7rem; 
+  aspect-ratio: 1;
+  background-image: radial-gradient(rgba(159, 238, 156, .9), rgba(30,110, 6, .8)); 
+
+  position: relative;
+  top: 10rem; 
+  left: 15rem;  
+  border-radius: 50%;
+  transform: rotateX(90deg) rotateY(40deg); 
+  transform-origin: top;
+  box-shadow: 0 0 .2rem #333; 
+}
+
