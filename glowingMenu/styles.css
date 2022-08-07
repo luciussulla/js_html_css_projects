@@ -1,0 +1,98 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+.container {
+  width:  100%; 
+  height: 100vh; 
+
+  display: flex; 
+  align-items: center;
+  background-color: #130b62;
+
+  perspective: 40rem; 
+}
+
+.menu {
+  width: 100%; 
+  padding: 0 19rem; 
+
+  display: flex; 
+  justify-content: space-between;
+  /* border: 1px solid red;  */
+  transform-style: preserve-3d;
+}
+
+.menu-item {
+  width: 17rem; 
+  height: 15rem; 
+  background-color: #5588dd;
+  border-radius: 1rem;
+  cursor: pointer; 
+  box-shadow: 0 0 2rem rgba(100, 100, 255, .4); 
+  /* transition: all 2s ease; */
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item:hover {
+  background-color: #ccccff;
+  box-shadow: 0 0 3rem rgba(100, 100, 255, .6); 
+}
+
+/* this class added whan mousover */ 
+.change.menu .menu-item {
+  transform: rotateY(0deg) rotateX(0deg) translateX(0rem) translateY(0rem) translateZ(0rem); 
+  opacity: 1; 
+}
+
+/* the below classes active when mouseover not active */ 
+.menu-item:not(.center-item) {
+  opacity: 0; 
+}
+
+.menu-item:nth-child(1) {
+  transform: rotateY(-70deg) rotateX(20deg) translateX(-50rem) translateY(-15rem)
+  translateZ(-50rem); 
+  transition: transform 1.2s ease-in, opacity 1s ease-in , background-color 1s ease-in, box-shadow 1s ease-in;
+}
+
+.menu-item:nth-child(2) {
+  transform: rotateY(-70deg) rotateX(20deg) translateX(-20rem) translateY(-5rem)
+  translateZ(-20rem); 
+  transition: transform 1.2s ease-in, opacity 1s ease-in, background-color 1s ease-in, box-shadow 1s ease-in;
+}
+
+.menu-item:nth-child(3) {
+  transform: rotateX(20deg); 
+  transition: transform 1s ease-in; 
+}
+
+.menu-item:nth-child(4) {
+  transform: rotateY(70deg) rotateX(20deg) translateX(20rem) translateY(-5rem)
+  translateZ(-20rem); 
+  transition: transform 1.2s ease-in, opacity 1s ease-in, background-color 1s ease-in, box-shadow 1s ease-in;
+}
+
+.menu-item:nth-child(5) {
+  transform: rotateY(70deg) rotateX(20deg) translateX(50rem) translateY(-15rem)
+  translateZ(-50rem); 
+  transition: transform 1.2s ease-in, opacity 1s ease-in, background-color 1s ease-in, box-shadow 1s ease-in;
+}
+
+.menu-item i {
+  font-size: 7rem; 
+  color: #222; 
+  transition: color .5s; 
+}
+
+.menu-item:hover i {
+  color: #6464ff; 
+}
