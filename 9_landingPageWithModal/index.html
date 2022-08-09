@@ -5,9 +5,79 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing With Modal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-  
+  <div class="container">
+
+    <div class="banner-text">
+      <h1>CodeAndCreate</h1>
+      <p>Learn how to code</p>
+    </div>
+
+    <div class="btns">
+      <button class="btn login-btn">Login</button>
+      <button class="btn signup-btn">Sign Up</button>
+    </div>
+
+    <div class="form-container">
+      <div class="signup-form-wrapper modal">
+        <div class="x-btn signup-x">
+          &times; 
+        </div>
+        <div class="form-header">
+          <h1>CodeAndCreate</h1>
+          <h3>Join Us</h3>
+        </div>
+        <form class="form">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" />
+          </div>
+
+          <div class="input-group">
+            <i class="far fa-envelope"></i>
+            <input type="text" placeholder="Email" />
+          </div>
+
+          <div class="input-group">
+            <i class="far fa-key"></i>
+            <input type="password" placeholder="Passeword" />
+          </div>
+
+          <button type="button">Sign Up</button>
+        </form>
+      </div><!-- signup form wrapper -->
+
+      <div class="login-form-wrapper modal">
+        <div class="x-btn login-x">
+          &times; 
+        </div>
+        <div class="form-header">
+          <h1>CodeAndCreate</h1>
+          <h3>Login</h3>
+        </div>
+        <form class="form">
+
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" />
+          </div>
+
+          <div class="input-group">
+            <i class="far fa-key"></i>
+            <input type="password" placeholder="Passeword" />
+          </div>
+          
+          <button type="button">Login</button>
+        </form>
+      </div><!-- signup form wrapper -->
+      
+    </div>
+  </div><!-- container -->
 </body>
 </html>
