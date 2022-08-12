@@ -20,6 +20,7 @@ html {
 }
 
 .btn {
+  display: inline-block; 
   width: 15rem; 
   height: 15rem; 
   background-color: #eee; 
@@ -27,26 +28,37 @@ html {
   border-radius: 50% 50% 0 50%; 
  
   position: relative; 
-  top: 10rem; 
-  left: -40rem; 
+  top: 7rem; 
+  left: -48rem; 
  
   border: .3rem dashed orange; 
   font-size: 2rem; 
   text-transform: uppercase;
   letter-spacing: .2rem;
-  line-height: 1.5;
+
+  line-height: 6rem;
+  vertical-align: middle;
   cursor: pointer;
+  text-align: center;
  }
 
  .letter {
   width: 15rem; 
-  height: 25rem; 
+  height: 20rem; 
   background-color: #fff;
   padding: 2rem 1rem 2rem 1rem; 
   color:#555; 
   box-shadow: 0 0 .1rem #aaa;
   font-size: 1.5rem; 
   text-indent: .5rem; 
+  text-align: center;
+  transform-origin: bottom;
+  transition: transform 1s; 
+ }
+
+.change .letter {
+  transform: rotateX(-80deg);
+  transition: transform 1s 2s; 
  }
 
 .table {
@@ -55,12 +67,18 @@ html {
   background: radial-gradient(rgba(255,255,255, .9), rgba(38, 191, 230, .9)); 
   border-radius: 50%;
   border-bottom: 2rem solid rgb(153, 233, 253);
-  transform: rotateX(70deg) translateZ(10rem); 
+  transform: rotateX(70deg) translateZ(30rem); 
   transform-style: preserve-3d;
   /* background: transparent; */
   display: flex; 
   justify-content: center;
   align-items: center;
+  transition: transform 2s; 
+}
+
+.table.change {
+  transform: rotateX(80deg) translateY(30rem) translateZ(10rem); 
+  transition: transform 2s; 
 }
 
 .table-leg {
@@ -71,8 +89,6 @@ html {
   position: absolute; 
   top: 30rem;
   left: 28.5rem; 
-
-
 }
 
 .table-leg-1 {
