@@ -19,6 +19,36 @@ html {
   overflow: hidden; 
 }
 
+.btn {
+  width: 15rem; 
+  height: 15rem; 
+  background-color: #eee; 
+  color: rgb(252, 35, 7); 
+  border-radius: 50% 50% 0 50%; 
+ 
+  position: relative; 
+  top: 10rem; 
+  left: -40rem; 
+ 
+  border: .3rem dashed orange; 
+  font-size: 2rem; 
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  line-height: 1.5;
+  cursor: pointer;
+ }
+
+ .letter {
+  width: 15rem; 
+  height: 25rem; 
+  background-color: #fff;
+  padding: 2rem 1rem 2rem 1rem; 
+  color:#555; 
+  box-shadow: 0 0 .1rem #aaa;
+  font-size: 1.5rem; 
+  text-indent: .5rem; 
+ }
+
 .table {
   width: 60rem; 
   height: 60rem; 
@@ -79,5 +109,6 @@ html {
   position: absolute; 
   transform: translateZ(-23rem);
   box-shadow: inset -5rem -5rem 10rem #000, inset 5rem 5rem 10rem #000; 
-
 }
+
+
